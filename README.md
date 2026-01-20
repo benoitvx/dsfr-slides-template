@@ -6,7 +6,7 @@ Template de présentation web conforme au **Design System de l'État (DSFR)**.
 
 ## Démo
 
-👉 [Voir la présentation d'exemple](https://votre-username.github.io/dsfr-slides-template/)
+👉 [Voir la présentation d'exemple](https://benoitvx.github.io/dsfr-slides-template/)
 
 ## Fonctionnalités
 
