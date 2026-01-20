@@ -23,7 +23,14 @@ Template de présentation web conforme au **Design System de l'État (DSFR)**.
 
 Cliquez sur **"Use this template"** sur GitHub ou forkez ce repo.
 
-### 2. Éditer `slides.md` (à la racine du projet)
+### 2. Déployer
+
+Activez GitHub Pages dans les settings de votre repo :
+1. Settings → Pages
+2. Source : **GitHub Actions**
+3. Push sur `main` → déploiement automatique
+
+### 3. Éditer `slides.md` (à la racine du projet)
 
 Ouvrez le fichier `slides.md` situé **à la racine du projet** et modifiez-le :
 
@@ -52,12 +59,8 @@ Contenu de votre première slide...
 Autre contenu...
 ```
 
-### 3. Déployer
-
-Activez GitHub Pages dans les settings de votre repo :
-1. Settings → Pages
-2. Source : **GitHub Actions**
-3. Push sur `main` → déploiement automatique
+### Votre présentation est en ligne 
+URL : https://votre-nom-d-utilisateur.github.io/nom-de-votre-repo/
 
 ## Format Markdown
 
