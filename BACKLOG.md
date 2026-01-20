@@ -1,57 +1,61 @@
 # Backlog
 
-## 🎯 MVP (v0.1.0)
+## 🎯 MVP (v0.1.0) ✅
 
 ### Setup projet
-- [ ] Init Vite + React + TypeScript
-- [ ] Installer et configurer `@codegouvfr/react-dsfr`
-- [ ] Structure dossiers selon `CLAUDE.md`
-- [ ] Config TypeScript strict
-- [ ] Git init + premier commit
+- [x] Init Vite + React + TypeScript
+- [x] Installer et configurer `@codegouvfr/react-dsfr`
+- [x] Structure dossiers selon `CLAUDE.md`
+- [x] Config TypeScript strict
+- [x] Git init + premier commit
 
 ### Récupérer code existant (depuis `atelier-mcp-slides`)
-- [ ] Copier `Slide.tsx` → adapter pour contenu dynamique
-- [ ] Copier `SlideNavigation.tsx` → réutiliser tel quel
-- [ ] Copier `SlideProgress.tsx` → réutiliser tel quel
-- [ ] Copier `useSlideNavigation.ts` → ajouter sync URL
-- [ ] Copier `slides.module.css` → nettoyer styles inutilisés
-- [ ] Ne PAS copier les slides individuelles (`src/slides/`)
+- [x] Copier `Slide.tsx` → adapter pour contenu dynamique
+- [x] Copier `SlideNavigation.tsx` → réutiliser tel quel
+- [x] Copier `SlideProgress.tsx` → réutiliser tel quel
+- [x] Copier `useSlideNavigation.ts` → ajouter sync URL
+- [x] Copier `slides.module.css` → nettoyer styles inutilisés
+- [x] Ne PAS copier les slides individuelles (`src/slides/`)
 
 ### Parser Markdown (nouveau)
-- [ ] Parser front-matter YAML (title, author, role, date)
-- [ ] Parser sections (`# Section`)
-- [ ] Parser slides (`## Slide`)
-- [ ] Support markdown standard (bold, italic, listes, liens)
-- [ ] Support tables markdown → `<Table>` DSFR
-- [ ] Support blockquotes → `<Callout>` DSFR
-- [ ] Support directives custom `:::callout` `:::alert`
-- [ ] Support images `![alt](url)`
+- [x] Parser front-matter YAML (title, author, role, date)
+- [x] Parser sections (`# Section`)
+- [x] Parser slides (`## Slide`)
+- [x] Support markdown standard (bold, italic, listes, liens)
+- [x] Support tables markdown → `<Table>` DSFR
+- [x] Support blockquotes → `<Callout>` DSFR
+- [x] Support directives custom `:::callout` `:::alert`
+- [x] Support images `![alt](url)`
 
 ### Composants React
-- [ ] Adapter `Slide` pour accepter du contenu parsé
-- [ ] `SlideContent` - Rendu du markdown parsé (nouveau)
-- [ ] `SlideDeck` - Orchestrateur principal (nouveau)
+- [x] Adapter `Slide` pour accepter du contenu parsé
+- [x] `SlideContent` - Rendu du markdown parsé (nouveau)
+- [x] `SlideDeck` - Orchestrateur principal (nouveau)
+- [x] `SlideLayout` - Layout complet avec header, section, chiffre décoratif
+- [x] `TitleSlide` - Slide de titre avec fond bleu
+- [x] `SlideHeader` - Header DSFR avec logo gouvernement
+- [x] `SlideFooter` - Footer avec ligne bleue
 
 ### Navigation
-- [ ] Adapter `useSlideNavigation` pour sync URL (`?slide=5`)
-- [ ] Vérifier navigation clavier (←→, Espace, Home, End, 1-9)
-- [ ] Accessibilité : `aria-live`, focus management
+- [x] Adapter `useSlideNavigation` pour sync URL (`?slide=5`)
+- [x] Vérifier navigation clavier (←→, Espace, Home, End, 1-9)
+- [x] Accessibilité : `aria-live`, focus management
 
 ### Styles
-- [ ] Layout slide plein écran
-- [ ] Alternance fonds `default` / `alt`
-- [ ] Responsive (desktop prioritaire, mobile bonus)
+- [x] Layout slide plein écran
+- [x] Fond gris uniforme (style DINUM)
+- [x] Responsive (desktop prioritaire, mobile bonus)
 - [ ] Print styles (bonus)
 
 ### GitHub Actions
-- [ ] Workflow `deploy.yml` pour GitHub Pages
-- [ ] Build automatique sur push `main`
-- [ ] Config `vite.config.ts` pour base path dynamique
+- [x] Workflow `deploy.yml` pour GitHub Pages
+- [x] Build automatique sur push `main`
+- [x] Config `vite.config.ts` pour base path dynamique
 
 ### Documentation
-- [ ] `README.md` - Guide utilisateur complet
-- [ ] `FORMAT.md` - Spec du format Markdown
-- [ ] `slides.md` - Exemple de présentation
+- [x] `README.md` - Guide utilisateur complet
+- [x] `FORMAT.md` - Spec du format Markdown
+- [x] `slides.md` - Exemple de présentation
 
 ---
 
@@ -90,15 +94,15 @@
 ## 📝 Notes
 
 ### Priorités MVP
-1. **Parser MD robuste** - C'est le cœur du projet
-2. **Rendu DSFR correct** - Doit être irréprochable visuellement
-3. **Navigation fluide** - UX de présentation classique
-4. **GitHub Pages** - Déploiement zero-config
+1. **Parser MD robuste** - C'est le cœur du projet ✅
+2. **Rendu DSFR correct** - Doit être irréprochable visuellement ✅
+3. **Navigation fluide** - UX de présentation classique ✅
+4. **GitHub Pages** - Déploiement zero-config ✅
 
 ### Décisions techniques
-- Parser : utiliser `gray-matter` pour front-matter + `marked` ou `remark` pour MD
+- Parser : `js-yaml` pour front-matter + `marked` pour MD (gray-matter non compatible browser)
 - Pas de state management externe (useState/useReducer suffisent)
-- Directives custom : parser maison simple, pas besoin de remark-directive
+- Directives custom : parser maison simple avec regex, pas besoin de remark-directive
 
 ### Questions ouvertes
 - [ ] Supporter les GIFs animés ? (poids des fichiers)
